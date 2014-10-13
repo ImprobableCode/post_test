@@ -11,20 +11,20 @@
     <script src="js/post.js"></script>
         
     <script>
-        function onBodyLoad() {	
+      //  function onBodyLoad() {	
    
 			document.getElementById("demo1").innerHTML = "Onbodyloaded";
 
             document.addEventListener("deviceready",onDeviceReady,false);
     
 
-        }
+      //  }
 
 
         function onDeviceReady()
         {
         document.getElementById("demo2").innerHTML = "deviceReady "; 
-		$(document).trigger('deviceready')
+		//$(document).trigger('deviceready')
         document.getElementById("demo3").innerHTML = "triggered "; 
 
         }
@@ -36,7 +36,7 @@
         }
     </style>
 </head>
-<body onload="onBodyLoad()">
+
 
 <div id="landmark-1" data-landmark-id="1">
 	<form>
