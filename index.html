@@ -27,9 +27,8 @@ sending();
 function sending()
 {
 document.getElementById("demo1").innerHTML = "Sending "; 
-
-$.post('http://www.holytwit.com/gold/save.php', { field1: "hello", field2 : "hello2"}, 
-
+var data = 'steve';
+$.post("http://www.holytwit.com/gold/save.php", data);
 }
 
 
