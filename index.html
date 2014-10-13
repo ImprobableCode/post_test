@@ -37,7 +37,7 @@ var postData = $(this).serialize();
         //dataType   : 'json',
         success    : function(response) {
             console.error(JSON.stringify(response));
-            alert('Works!');
+            alert(postData + 'Works!');
         },
         error      : function() {
             console.error("error");
