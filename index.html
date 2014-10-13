@@ -6,11 +6,15 @@
 	
 <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 <script src="js/jquery-2.1.1.min.js"></script>
- <p id="demo1"> Tester </p>
+
+<p id="demo1"> Tester </p>
 <p id="demo2"> Tester </p>
 <p id="demo3"> Tester </p>
 <script>
+
 var postData = 'steve';
+var postData2= "Steve";
+
 document.addEventListener("deviceready",onDeviceReady,false);   
 
 sending();
@@ -38,7 +42,7 @@ document.getElementById("demo3").innerHTML = "test : "+ postData;
         type       : 'POST',
         url        : 'http://www.holytwit.com/gold/save.php',
         crossDomain: true,
-        data       : postData,
+        data       : postData + postData2,
         //dataType   : 'json',
         success    : function(response) {
             console.error(JSON.stringify(response));
