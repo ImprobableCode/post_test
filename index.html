@@ -12,7 +12,7 @@
     <script>
      //  function onBodyLoad() {	
 document.addEventListener("deviceready",onDeviceReady,false);   
-document.getElementById("demo1").innerHTML = "Onbodyloaded";
+
 
 
     
@@ -23,21 +23,21 @@ function onDeviceReady()
 document.getElementById("demo2").innerHTML = "deviceReady "; 
 //$(document).trigger('deviceready')
 document.getElementById("demo3").innerHTML = "triggered "; 
+sending();
+}
 
-//$(document).bind('deviceready', function(){
-  //  $(function(){
-        $('form').submit(function(){
-            var landmarkID = $(this).parent().attr('data-landmark-id');
-            var postData = $(this).serialize();
+function sending();
+{
+document.getElementById("demo3").innerHTML = "Sending "; 
+var postData = "steve";
             
             $.ajax({
                 type: 'POST',
-                data: postData+'&lid='+landmarkID,
-                //change the url for your project
+                data: postData,
                 url: 'http://www.holytwit.com/gold/save.php',
                 success: function(data){
-                 console.log(data);
-                 alert('Your comment was successfully added');
+                console.log(data);
+                alert('Your comment was successfully added');
                 document.getElementById("demo3").innerHTML = "worked " ; 
 
                 },
@@ -51,35 +51,16 @@ document.getElementById("demo3").innerHTML = "triggered ";
         });
     });
 });
-
-
-
-
 }
- </script>
+
+
+</script>
         
-    <style>
-        label, b {
-            display: block;
-        }
-    </style>
+    
 </head>
 
 
-<div id="landmark-1" data-landmark-id="1">
-	<form>
-		<label for="email">
-			<b>Email</b>
-			<input type="email" id="email" name="email">
-		</label>
-
-		<label for="comment">
-			<b>Comment</b>
-			<textarea id="comment" name="comment" cols="30" rows="10"></textarea>
-		</label>
-		
-		<input type="submit" value="Save">
-	</form>
+<
 
 	<p id="demo1"> Tester </p>
 	<p id="demo2"> Tester </p>
