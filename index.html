@@ -26,12 +26,21 @@ sending();
 function sending()
 {
 document.getElementById("demo1").innerHTML = "Sending "; 
-
-var $name = "steve";
-var serializedData = $name.serialize();
-
-$.post("http://www.holytwit.com/gold/save.php", serializedData);
-}
+    $.ajax({
+        type       : "POST",
+        url        : "http://domain/public/login",
+        crossDomain: true,
+        data       : {username : 'subin', password : 'passwordx'},
+        //dataType   : 'json',
+        success    : function(response) {
+            //console.error(JSON.stringify(response));
+            alert('Works!');
+        },
+        error      : function() {
+            //console.error("error");
+            alert('Not working!');                  
+        }
+    });  
 
 
 </script>
