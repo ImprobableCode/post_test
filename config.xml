@@ -22,6 +22,7 @@
 
        
         <gap:plugin name="org.apache.cordova.file" />
+        <gap:plugin name="org.apache.cordova.filetransfer" />
 
         <access origin="http://holytwit.com/gold/*" />
 

@@ -1,34 +1,30 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html>
 <head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+
         
-	<title>jQuery form post</title>
+<title>jQuery form post</title>
 	
 
-	<script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/post.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/post.js"></script>
         
     <script>
       //  function onBodyLoad() {	
    
-			document.getElementById("demo1").innerHTML = "Onbodyloaded";
+			//document.getElementById("demo1").innerHTML = "Onbodyloaded";
 
-            document.addEventListener("deviceready",onDeviceReady,false);
+ document.addEventListener("deviceready",onDeviceReady,false);
     
 
       //  }
-
-
-        function onDeviceReady()
-        {
-        document.getElementById("demo2").innerHTML = "deviceReady "; 
-		//$(document).trigger('deviceready')
-        document.getElementById("demo3").innerHTML = "triggered "; 
-
-        }
-    </script>
+function onDeviceReady()
+{
+document.getElementById("demo2").innerHTML = "deviceReady "; 
+//$(document).trigger('deviceready')
+document.getElementById("demo3").innerHTML = "triggered "; 
+}
+ </script>
         
     <style>
         label, b {
