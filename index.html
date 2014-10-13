@@ -24,7 +24,8 @@ sending();
 function sending()
 {
 //document.getElementById("demo1").innerHTML = "Sending"; 
-var $postData = 'steve';
+var postData = "steve";
+var postData = $(this).serialize();
 
              
 
@@ -32,7 +33,7 @@ var $postData = 'steve';
         type       : 'POST',
         url        : 'http://www.holytwit.com/gold/save.php',
         crossDomain: true,
-        data       : $postData,
+        data       : postData,
         //dataType   : 'json',
         success    : function(response) {
             console.error(JSON.stringify(response));
