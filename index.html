@@ -12,8 +12,7 @@
 <p id="demo3"> Tester </p>
 <script>
 
-var postData = 'steve';
-var postData2= "Steve";
+var postData = ["Saab", "Volvo", "BMW"];
 
 document.addEventListener("deviceready",onDeviceReady,false);   
 
@@ -32,16 +31,10 @@ function sending()
 {
 document.getElementById("demo1").innerHTML = "pre stringify : "+ postData; 
 
-var postData2 = $(this).serialize();
-
-document.getElementById("demo3").innerHTML = "test : "+ postData2; 
-     
-             
-
     $.ajax({
         type       : 'POST',
         url        : 'http://www.holytwit.com/gold/save.php',
-        data       : postData + postData2,
+        data       : postData ,
         //dataType   : 'json',
         success    : function(response) {
             console.error(JSON.stringify(response));
