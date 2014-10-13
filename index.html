@@ -27,10 +27,10 @@ function sending()
 {
 document.getElementById("demo1").innerHTML = "Sending "; 
     $.ajax({
-        type       : "POST",
-        url        : "http://domain/public/login",
+        type       : 'POST',
+        url        : 'http://www.holytwit.com/gold/save.php',
         crossDomain: true,
-        data       : {username : 'subin', password : 'passwordx'},
+        data       : name,
         //dataType   : 'json',
         success    : function(response) {
             //console.error(JSON.stringify(response));
