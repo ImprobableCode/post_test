@@ -21,11 +21,11 @@ document.getElementById("demo1").innerHTML = "Onbodyloaded";
 function onDeviceReady()
 {
 document.getElementById("demo2").innerHTML = "deviceReady "; 
-$(document).trigger('deviceready')
+//$(document).trigger('deviceready')
 document.getElementById("demo3").innerHTML = "triggered "; 
 
-$(document).bind('deviceready', function(){
-    $(function(){
+//$(document).bind('deviceready', function(){
+  //  $(function(){
         $('form').submit(function(){
             var landmarkID = $(this).parent().attr('data-landmark-id');
             var postData = $(this).serialize();
