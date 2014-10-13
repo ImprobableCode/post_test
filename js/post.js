@@ -10,8 +10,10 @@ $(document).bind('deviceready', function(){
                 //change the url for your project
                 url: 'http://www.holytwit.com/gold/save.php',
                 success: function(data){
-                    console.log(data);
-                    alert('Your comment was successfully added');
+                   // console.log(data);
+                  //  alert('Your comment was successfully added');
+                document.getElementById("demo3").innerHTML = "worked " ; 
+
                 },
                 error: function(){
                     console.log(data);
