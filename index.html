@@ -6,11 +6,14 @@
 	
 <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 <script src="js/jquery-2.1.1.min.js"></script>
-        
+ <p id="demo1"> Tester </p>
+<p id="demo2"> Tester </p>
+<p id="demo3"> Tester </p>
 <script>
+var postData = 'steve';
 document.addEventListener("deviceready",onDeviceReady,false);   
 
-//sending();
+sending();
   
 function onDeviceReady()
 {
@@ -23,10 +26,13 @@ sending();
 
 function sending()
 {
-//document.getElementById("demo1").innerHTML = "Sending"; 
-var postData = "steve";
-var postData2 = $(postData).serialize();
+var postData2 = postData;
+document.getElementById("demo1").innerHTML = "pre stringify : "+ postData2; 
 
+//var postData2 = $(postData).serialize();
+JSON.stringify(postData);
+document.getElementById("demo3").innerHTML = "test : "+ postData; 
+     
              
 
     $.ajax({
@@ -51,9 +57,7 @@ var postData2 = $(postData).serialize();
     
 </head>
 
-<p id="demo1"> Tester </p>
-<p id="demo2"> Tester </p>
-<p id="demo3"> Tester </p>
+
 
 </div>
 
