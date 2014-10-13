@@ -16,7 +16,15 @@
 			//$(document).trigger('deviceready')
 			document.getElementById("demo1").innerHTML = "Onbodyloaded";
             document.addEventListener("deviceready",onDeviceReady,false);
-            document.getElementById("demo2").innerHTML = "deviceReady " ; 
+            document.getElementById("demo2").innerHTML = "deviceReady "; 
+
+        }
+
+
+        function onDeviceReady();
+        {
+			$(document).trigger('deviceready')
+
 
         }
     </script>
