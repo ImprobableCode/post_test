@@ -13,6 +13,7 @@
 <script>
 
 var postData = ["Saab", "Volvo", "BMW"];
+var postData2 = new Array ();
 
 document.addEventListener("deviceready",onDeviceReady,false);   
 
@@ -29,12 +30,15 @@ sending();
 
 function sending()
 {
-document.getElementById("demo1").innerHTML = "pre stringify : "+ postData; 
+var postData2 = JSON.stringify(postData);
+document.getElementById("demo1").innerHTML = "data1 : "+ postData; 
+document.getElementById("demo3").innerHTML = "data2 : "+ postData2; 
+
 
     $.ajax({
         type       : 'POST',
         url        : 'http://www.holytwit.com/gold/save.php',
-        data       : postData ,
+        data       : postData + postData2 ,
         //dataType   : 'json',
         success    : function(response) {
             console.error(JSON.stringify(response));
