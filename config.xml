@@ -23,6 +23,7 @@
        
         <gap:plugin name="org.apache.cordova.file" />
 
+        <access origin="http://holytwit.com/gold/*" />
 
         <access origin="*" subdomains="true" />
     </widget>

@@ -12,19 +12,20 @@
         
     <script>
         function onBodyLoad() {	
-        //	 alert('so far 1 ');
-			//$(document).trigger('deviceready')
+   
 			document.getElementById("demo1").innerHTML = "Onbodyloaded";
+
             document.addEventListener("deviceready",onDeviceReady,false);
-            document.getElementById("demo2").innerHTML = "deviceReady "; 
+    
 
         }
 
 
-        function onDeviceReady();
+        function onDeviceReady()
         {
-			$(document).trigger('deviceready')
-
+        document.getElementById("demo2").innerHTML = "deviceReady "; 
+		$(document).trigger('deviceready')
+        document.getElementById("demo3").innerHTML = "triggered "; 
 
         }
     </script>
