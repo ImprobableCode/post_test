@@ -27,11 +27,11 @@ sending();
 function sending()
 {
 document.getElementById("demo1").innerHTML = "Sending "; 
-var data = "steve";
+var name = "steve";
             
             $.ajax({
                 type: 'POST',
-                data: data,
+                data: name,
                 url: 'http://www.holytwit.com/gold/save.php',
                 success: function(data){
                 console.log(data);
