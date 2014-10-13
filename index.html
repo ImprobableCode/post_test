@@ -18,7 +18,6 @@ function onDeviceReady()
 {
 document.getElementById("demo2").innerHTML = "deviceReady "; 
 //$(document).trigger('deviceready')
-document.getElementById("demo3").innerHTML = "triggered "; 
 sending();
 }
 
@@ -28,8 +27,10 @@ function sending()
 {
 document.getElementById("demo1").innerHTML = "Sending "; 
 
-var name = "steve";
-$.post("http://www.holytwit.com/gold/save.php", name);
+var $name = "steve";
+var serializedData = $name.serialize();
+
+$.post("http://www.holytwit.com/gold/save.php", serializedData);
 }
 
 
