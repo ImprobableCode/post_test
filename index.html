@@ -9,7 +9,7 @@
 <script src="js/jquery-2.1.1.min.js"></script>
         
 <script>
-
+var name = "steve";
 document.addEventListener("deviceready",onDeviceReady,false);   
 
 
@@ -27,11 +27,11 @@ sending();
 function sending()
 {
 document.getElementById("demo1").innerHTML = "Sending "; 
-var name = "steve";
+
             
             $.ajax({
                 type: 'POST',
-                data: name,
+                data: 'steve',
                 url: 'http://www.holytwit.com/gold/save.php',
                 success: function(data){
                 console.log(data);
