@@ -19,14 +19,14 @@ function onDeviceReady()
 document.getElementById("demo2").innerHTML = "deviceReady "; 
 //$(document).trigger('deviceready')
 document.getElementById("demo3").innerHTML = "triggered "; 
-//sending();
+sending();
 }
 
 
 
 function sending()
 {
-document.getElementById("demo3").innerHTML = "Sending "; 
+document.getElementById("demo1").innerHTML = "Sending "; 
 var data = "steve";
             
             $.ajax({
