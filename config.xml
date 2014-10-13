@@ -22,4 +22,7 @@
 
        
         <gap:plugin name="org.apache.cordova.file" />
+
+
+        <access origin="*" subdomains="true" />
     </widget>
