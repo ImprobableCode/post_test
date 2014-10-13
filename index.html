@@ -38,7 +38,7 @@ document.getElementById("demo3").innerHTML = "data2 : "+ postData[0];
     $.ajax({
         type       : 'POST',
         url        : 'http://www.holytwit.com/gold/save.php',
-        data       : postData[0],
+        data       : 'Data: '+ postData[0],
         //dataType   : 'json',
         success    : function(response) {
             console.error(JSON.stringify(response));
