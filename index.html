@@ -11,7 +11,7 @@
 var name = "steve";
 document.addEventListener("deviceready",onDeviceReady,false);   
 
-
+sending();
   
 function onDeviceReady()
 {
@@ -24,19 +24,23 @@ sending();
 
 function sending()
 {
-document.getElementById("demo1").innerHTML = "Sending "; 
+//document.getElementById("demo1").innerHTML = "Sending"; 
+var $postData = $(name).serialize();
+
+             
+
     $.ajax({
         type       : 'POST',
         url        : 'http://www.holytwit.com/gold/save.php',
         crossDomain: true,
-        data       : name,
+        data       : $postData,
         //dataType   : 'json',
         success    : function(response) {
-            //console.error(JSON.stringify(response));
+            console.error(JSON.stringify(response));
             alert('Works!');
         },
         error      : function() {
-            //console.error("error");
+            console.error("error");
             alert('Not working!');                  
         }
     });  
